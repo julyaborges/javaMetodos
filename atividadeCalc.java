@@ -52,6 +52,7 @@ public class atividadeCalc {
         double numero1 = scanner.nextDouble();
         System.out.println("Digite o segundo numero: ");
         double numero2 = scanner.nextDouble();
+        scanner.nextLine();
         
         double resultado = 0;
 
@@ -75,5 +76,14 @@ public class atividadeCalc {
                 System.out.println("Operador ou numero invalido.");
         }
         System.out.println("Resultado: "+resultado);
+
+        System.out.print("Deseja continuar calculando? (s/n): ");
+        String resposta = scanner.nextLine().toLowerCase();
+
+        if (resposta.equals("s")) {
+            main(null); 
+        } else {
+            System.out.println("Calculadora encerrada.");
+        }
     }
 }
